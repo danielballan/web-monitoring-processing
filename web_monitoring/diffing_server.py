@@ -57,6 +57,8 @@ XML_PROLOG_PATTERN = re.compile(
     b'<?xml\\s[^>]*encoding=[\'"]([^\'"]+)[\'"].*\?>',
     re.IGNORECASE)
 
+client = tornado.httpclient.AsyncHTTPClient()
+
 
 class MockRequest:
     "An HTTPRequest-like object for local file:/// requests."
